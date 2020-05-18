@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gotu&display=swap" rel="stylesheet">
+    <script src="main.js"></script>
+    <title>Coffee Break Algorithm ☕</title>
+</head>
+<body>
+    <div class="container">
+        <div id="roomName"></div>
+        <div id="mainContent">
+            <div id="computerState"></div>
+            <div id="peopleState"></div>
+            <div id="kitchenObjects"></div>
+            <div id="stockContainer"></div>
+            <div id="shoppingList"></div>
+            <div id="coffeeSetUpContainer"></div>
+            <div id="doCoffee" class="hidden">
+                <div id="kettle" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <span>We have the kettle and just need to drag and drop the ingredients needed here.</span>
+                    <img src="media/kettle.png" />
+                    <img id="circleMix" src="media/multicolor-on.svg" class="hidden">
+                    <div id="circlesDiv"></div>
+                    <button id="mixButton" onclick="mixIngredients(event)">Mix Everything!</button>
+                    <button id="turnOff" onclick="turnOffStove(event)" class="hidden">Turn Off Stove</button>
+                </div>
+                <div id="ingredients"></div>
+            </div>
+        </div>
+        <div id="lastContent" class="hidden">
+            <img src="" alt="">
+            <div id="lastBtns">
+                <button id="enjoyIt" onclick="enjoyCoffee(event)">ENJOY YOUR COFFEE</button>
+                <button id="doCleanUp" onclick="doCleanUp(event)">DO CLEANUP</button>
+                <button id="finishBreak" onclick="finishBreak(event)">GO TO WORK</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

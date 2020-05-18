@@ -30,38 +30,38 @@ takeObject(obj)
 // main flow
 setPrerequisites()
     setupPerson()
-        lock computer
-        get up
-        go to the kitchen
-        wash hands
+        - lock computer
+        - get up
+        - go to the kitchen
+        - wash hands
     setupEnvironment()
-        takeObject(kettle)
-        takeObject(spoon)
-        validateIngredients(all needed ingredients) // coffee, water, sugar
-            if fail validateIngredients -> goToTheStore([shoppingList])
-            if not fail -> takeIngredient(ingredient, quantity)
+        - takeObject(kettle)
+        - takeObject(spoon)
+        - validateIngredients(all needed ingredients) // coffee, water, sugar
+            - if fail validateIngredients -> goToTheStore([shoppingList])
+            - if not fail -> takeIngredient(ingredient, quantity)
 
 doAction()
-    put kettle on stove
-    putIngredient(kettle, water)
-    turn on stove
-    check boiling water
+    - put kettle on stove
+    - putIngredient(coffee, water)
+    - turn on stove
+    - check boiling water
         true 
-            putIngredient(kettle, coffee)
-            putIngredient(kettle, sugar)
-            mix(kettle)
-            turn off stove
-            pour coffee
+            - putIngredient(kettle, coffee)
+            - putIngredient(kettle, sugar)
+            - mix(kettle)
+            - turn off stove
+            - pour coffee
         false
-            wait
-            check again
+            - wait
+            - check again
 doCleanup()
-    clean(kettle)
-    clean(spoon)
+    - clean(kettle)
+    - clean(spoon)
 
 enjoy()
-    drink(coffee)
+    - drink(coffee)
 
 finishBreak()
-    clean(cup)
-    return to desk
+    - clean(cup)
+    - return to desk

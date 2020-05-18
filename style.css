@@ -1,0 +1,223 @@
+body {
+    background-color: #34495e;
+    font-family: 'Gotu', sans-serif;
+    color: rgba(255,255,255,0.7);
+}
+
+.container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}
+
+.gold {
+    background-image: url('media/multicolor-on.svg');
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+}
+
+#mixButton, #turnOff {
+    width: 132px;
+    padding: 10px;
+    font-family: 'Gotu', sans-serif;
+    font-weight: 700;
+    color: #34495e;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+
+#enjoyIt, #doCleanUp, #finishBreak {
+    width: 170px;
+    padding: 10px;
+    font-family: 'Gotu', sans-serif;
+    font-weight: 700;
+    color: #34495e;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin: 0 27px;
+}
+
+#mixButton:hover, #turnOff:hover, #enjoyIt:hover, #doCleanUp:hover, #finishBreak:hover {
+    background-color: rgba(255,255,255,0.8);
+}
+
+/*-----CONTAINER-----*/
+/**room name**/
+#roomName {
+    font-size: 34px;
+    text-align: center;
+    color: #f39c12;
+}
+
+/**people state**/
+#peopleState {
+    height: 100px;
+}
+
+/**kitchen objects**/
+#kitchenObjects {
+    display: flex;
+    align-items: center;
+}
+
+/**stock container**/
+.ingredientStockEmpty, .ingredientStockFull {
+    width: 100px;
+}
+
+.ingredientStockEmpty {
+    background-color:#E0E0E0;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.ingredientStockFull {
+    background-color: #f39c12;
+}
+
+#stockContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    margin-top: 30px;
+}
+
+#stockContainer > div:nth-child(2) > div:nth-child(3), #stockContainer > div:nth-child(3) > div:nth-child(3), #stockContainer > div:nth-child(4) > div:nth-child(3) {
+    text-align: center;;
+}
+
+#stockContainer > div {
+    padding-right: 30px;
+}
+
+/**shopping list**/
+#shoppingList {
+    margin-top: 30px;
+}
+
+/**coffee setup container**/
+#kitchenWareDiv {
+    display: flex;
+    align-items: center;
+}
+
+/**do coffee**/
+#doCoffee {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#doCoffee h2 {
+    flex-basis: 100%;
+}
+
+#kettle {
+    flex-basis: 50%;
+    padding-top: 27px;
+}
+
+#kettle > img:nth-child(2) {
+    height: 120px;
+}
+
+#circlesDiv {
+    display: flex;
+    padding: 0 0 30px 0;
+}
+
+#circlesDiv > div {
+    margin-right: 15px;
+}
+
+#ingredients {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#ingredients > div {
+    flex-basis: 100%;
+}
+
+.ingr {
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.coffee {
+    background-color: #3e2413;
+}
+
+.sugar {
+    background-color: rgba(255, 188, 216, 0.7);
+}
+
+.water {
+    background-color: #19B5FE;
+}
+
+#circleMix {
+    height: 20px;
+    display: block;
+}
+
+/*last content*/
+#lastContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#lastBtns {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0;
+}
+
+#lastImg {
+    width: 626px;
+}
+/*-----END CONTAINER-----*/
+
+/*-----ELIPSE ANIMATION-----*/
+#elipse:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    -webkit-animation: ellipsis steps(4,end) 900ms infinite;      
+    animation: ellipsis steps(4,end) 900ms infinite;
+    content: "\2026"; /* ascii code for the ellipsis character */
+    width: 0px;
+  }
+  
+  @keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+  
+  @-webkit-keyframes ellipsis {
+    to {
+      width: 1.25em;    
+    }
+  }
+/*-----END ELIPSE ANIMATION-----*/
