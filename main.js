@@ -281,21 +281,21 @@ function checkBoilingWater() {
             clearInterval(tempInterval); //check boiling water
             
             setTimeout(doCoffee, 2000);
-        } 
-
-        let coffeeSetUpContainer = document.getElementById("coffeeSetUpContainer");
-        let coffeeSetUpTemp = document.getElementById("coffeeSetUpTemp");
-        if (!coffeeSetUpTemp) {
-            let waterTempDiv = document.createElement("div");
-            waterTempDiv.setAttribute("id", "waterTempDiv");
-            coffeeSetUpTemp = document.createElement("p");
-            coffeeSetUpTemp.setAttribute("id", "coffeeSetUpTemp");
-            waterTempDiv.appendChild(coffeeSetUpTemp);
-            coffeeSetUpContainer.appendChild(waterTempDiv);
+        } else {
+            let coffeeSetUpContainer = document.getElementById("coffeeSetUpContainer");
+            let coffeeSetUpTemp = document.getElementById("coffeeSetUpTemp");
+            if (!coffeeSetUpTemp) {
+                let waterTempDiv = document.createElement("div");
+                waterTempDiv.setAttribute("id", "waterTempDiv");
+                coffeeSetUpTemp = document.createElement("p");
+                coffeeSetUpTemp.setAttribute("id", "coffeeSetUpTemp");
+                waterTempDiv.appendChild(coffeeSetUpTemp);
+                coffeeSetUpContainer.appendChild(waterTempDiv);
+            }
+           
+            coffeeSetUpTemp.innerHTML = 'The water starts boiling: ' + initWaterTemp + '&#8451;';
+            initWaterTemp += 20;
         }
-       
-        coffeeSetUpTemp.innerHTML = 'The water starts boiling: ' + initWaterTemp + '&#8451;';
-        initWaterTemp += 20;
     }
 }
 
@@ -350,8 +350,8 @@ function mixIngredients() {
 }
 
 function turnOffStove(event) {
-    let stove = document.getElementById("turnOff");
-    stove.setAttribute("src", "media/stove-off.png");
+    let blackKettle = document.getElementById("blackKettle");
+    blackKettle.setAttribute("src", "media/stove-off.png");
     event.target.disabled = true; //event.target = butonul pe care am dat click
 
     setTimeout(pourCoffee, 5000);
