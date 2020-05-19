@@ -276,7 +276,8 @@ function checkBoilingWater() {
     function increaseTemperature() {
         if (initWaterTemp == 100) {
             let coffeeSetUpTemp = document.getElementById("coffeeSetUpTemp");
-            coffeeSetUpTemp.innerHTML = "Water boiled!";
+            coffeeSetUpTemp.innerHTML = "Water boiled! " + '<img src="media/thermometer.png" />';
+            coffeeSetUpTemp.style.color = "#D73C2C";
             
             clearInterval(tempInterval); //check boiling water
             

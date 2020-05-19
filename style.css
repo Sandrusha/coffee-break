@@ -115,6 +115,11 @@ body {
     align-items: center;
 }
 
+#coffeeSetUpTemp img{
+    height: 14px;
+    width: 14px;
+}
+
 /**do coffee**/
 #doCoffee {
     display: flex;
